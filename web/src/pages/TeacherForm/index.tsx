@@ -77,11 +77,11 @@ function TeacherForm() {
       <main>
         <form onSubmit={handleCreateClass}>
           <fieldset>
-            <legend>Your info</legend>
+            <legend>Seus dados</legend>
 
             <Input
               name="name"
-              label="Nome completo "
+              label="Nome completo"
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
@@ -143,9 +143,9 @@ function TeacherForm() {
 
           <fieldset>
             <legend>
-              Available Times
+              Horários disponíveis
               <button type="button" onClick={addNewScheduleItem}>
-                + New time
+                + Novo horário
               </button>
             </legend>
 
@@ -154,7 +154,7 @@ function TeacherForm() {
                 <div key={scheduleItem.week_day} className="schedule-item">
                   <Select
                     name="weed_day"
-                    label="Week Day"
+                    label="Dia da semana"
                     value={scheduleItem.week_day}
                     onChange={(e) =>
                       setScheduleItemValue(index, "week_day", e.target.value)
@@ -171,7 +171,7 @@ function TeacherForm() {
                   />
                   <Input
                     name="from"
-                    label="From"
+                    label="Das"
                     type="time"
                     value={scheduleItem.from}
                     onChange={(e) =>
@@ -180,7 +180,7 @@ function TeacherForm() {
                   />
                   <Input
                     name="to"
-                    label="to"
+                    label="até"
                     type="time"
                     value={scheduleItem.to}
                     onChange={(e) =>
